@@ -2,14 +2,14 @@
 
 ## Project Status Badges
 
-Master Branch: [![CircleCI](https://circleci.com/gh/FRossouw/angular-forms.svg?style=svg)](https://circleci.com/gh/FRossouw/angular-forms)
+Master Branch: [![CircleCI](https://circleci.com/gh/Keanu-Ellwood-DVT/angular-forms-demo/tree/master.svg?style=svg&circle-token=12dfe3208a3a2a0bb6dd920af0a38436e945ba2d)](https://circleci.com/gh/Keanu-Ellwood-DVT/angular-forms-demo/tree/master)
 
-Develop Branch: [![CircleCI](https://circleci.com/gh/FRossouw/angular-forms/tree/development.svg?style=svg)](https://circleci.com/gh/FRossouw/angular-forms/tree/development)
+Develop Branch: [![CircleCI](https://circleci.com/gh/Keanu-Ellwood-DVT/angular-forms-demo/tree/develop.svg?style=svg&circle-token=12dfe3208a3a2a0bb6dd920af0a38436e945ba2d)](https://circleci.com/gh/Keanu-Ellwood-DVT/angular-forms-demo/tree/develop)
 
 ## Angular Template Driven Form
 
-This will be an address form handling all address related data/information and validation.
+A form that allows the user to specify their address details.
 
 ## Angular Reactive Form
 
-This will be a customer form handling all customer/person related data/information and validation.
+A form that allows the user to specify their personal details.
