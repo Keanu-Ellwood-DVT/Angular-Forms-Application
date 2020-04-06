@@ -2,9 +2,9 @@
 
 ## Project Status Badges
 
-Master Branch: [![CircleCI](https://circleci.com/gh/Keanu-Ellwood-DVT/angular-forms-demo/tree/master.svg?style=svg)](https://circleci.com/gh/Keanu-Ellwood-DVT/angular-forms-demo/tree/master)
+Master Branch: [![CircleCI](https://circleci.com/gh/Keanu-Ellwood-DVT/angular-forms-demo.svg?style=shield)](https://circleci.com/gh/Keanu-Ellwood-DVT/angular-forms-demo)
 
-Develop Branch: [![CircleCI](https://circleci.com/gh/Keanu-Ellwood-DVT/angular-forms-demo/tree/develop.svg?style=svg)](https://circleci.com/gh/Keanu-Ellwood-DVT/angular-forms-demo/tree/develop)
+Develop Branch: [![CircleCI](https://circleci.com/gh/Keanu-Ellwood-DVT/angular-forms-demo/tree/develop.svg?style=shield)](https://circleci.com/gh/Keanu-Ellwood-DVT/angular-forms-demo/tree/develop)
 
 ## Angular Template Driven Form
 
