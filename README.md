@@ -1,27 +1,15 @@
-# AngularFormsDemoApp
+# Angular Forms Demo Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+## Project Status Badges
 
-## Development server
+Master Branch: [![CircleCI](https://circleci.com/gh/FRossouw/angular-forms.svg?style=svg)](https://circleci.com/gh/FRossouw/angular-forms)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Develop Branch: [![CircleCI](https://circleci.com/gh/FRossouw/angular-forms/tree/development.svg?style=svg)](https://circleci.com/gh/FRossouw/angular-forms/tree/development)
 
-## Code scaffolding
+## Angular Template Driven Form
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This will be an address form handling all address related data/information and validation.
 
-## Build
+## Angular Reactive Form
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This will be a customer form handling all customer/person related data/information and validation.
