@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, AbstractControl, Validators } from '@angular/forms';
+import { Province } from 'src/models/province.enum';
+import { Address } from 'src/models/address.model';
+
 
 @Component({
   selector: 'app-address-form',
@@ -8,15 +10,19 @@ import { FormGroup, FormControl, AbstractControl, Validators } from '@angular/fo
 })
 export class AddressFormComponent implements OnInit {
 
-  form: FormGroup;
+  address: Address;
+  provinces: Province[];
 
   constructor() {
-    this.form = new FormGroup({
-      
-    })
+    this.address = new Address();
+    this.provinces = Object.values(Province) as Province[];
   }
 
   ngOnInit(): void {
+  }
+
+  displayAddress() {
+    alert(JSON.stringify(this.address));
   }
 
 }
