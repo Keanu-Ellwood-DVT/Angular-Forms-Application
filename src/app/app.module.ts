@@ -8,6 +8,10 @@ import { PhoneNumberDirective } from './forms/directives/phone-number.directive'
 import { ReactiveFormsModule } from '@angular/forms';
 import { EmailDirective } from './forms/directives/email.directive';
 import { IdentificationNumberDirective } from './forms/directives/identification-number.directive';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { RouterModule } from '@angular/router';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +24,10 @@ import { IdentificationNumberDirective } from './forms/directives/identification
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
+    RouterModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
