@@ -1,7 +1,15 @@
 <div class='address-form container'>
-  <h1>Address Details</h1>
+  <div class="form-heading">
+    <h1 class="mx-3">Address Form</h1>
+    <button
+      [routerLink]="['/customer']"
+      routerLinkActive="router-link-active"
+      class="text-button">
+      Customer Details
+    </button>
+  </div>
 
-  <form #addressForm='ngForm' (ngSubmit)='displayAddress()'>
+  <form #addressForm='ngForm' class="col-sm-5" (ngSubmit)='displayAddress()'>
     <div class='form-group'>
       <label for='addressLine1'>Address Line 1 <b class='text-danger'>*</b></label>
       <input [(ngModel)]='address.addressLine1' type='text' class='form-control' name='addressLine1' id='addressLine1' autocapitalize='off' autocomplete='false' required #addressLine1='ngModel'>
