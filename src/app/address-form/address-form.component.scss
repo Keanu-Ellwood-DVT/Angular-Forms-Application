@@ -1,0 +1,15 @@
+.contact-form {
+  padding: 60px 0;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+label {
+  font-weight: 500;
+}
+
+.ng-invalid:not(form) {
+border: 2px solid #FF0039;
+}
