@@ -5,6 +5,9 @@ import { Customer } from 'src/models/customer.model';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { combineLatest } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { PhoneNumberValidationFactory } from 'src/app/forms/validators/phone-number-validation-factory';
+import { EmailValidationFactory } from 'src/app/forms/validators/email-validation-factory';
+import { IdNumberValidationFactory } from 'src/app/forms/validators/id-number-validation-factory';
 
 @Component({
   selector: 'app-customer-details',
@@ -12,26 +15,27 @@ import { map, startWith } from 'rxjs/operators';
   styleUrls: ['./customer-details.component.scss']
 })
 export class CustomerDetailsComponent implements OnInit {
-
+  form: FormGroup;
   titles: Title[];
   genders: Gender[];
   customer: Customer;
-
-  form: FormGroup;
 
   constructor() {
     this.form = new FormGroup({
       title: new FormControl('', { updateOn: 'change' }),
       firstName: new FormControl('', { validators: [ Validators.required ]}),
       middleName: new FormControl(''),
+      idNumber: new FormControl('', { validators: [ IdNumberValidationFactory.SouthAfricanIDNumber, Validators.required ]}),
+      nationality: new FormControl(''),
       lastName: new FormControl('', { validators: [ Validators.required ]}),
       gender: new FormControl('', { updateOn: 'blur' }),
-      phoneNumber: new FormControl('', { validators: [ Validators.required ] }),
-      email: new FormControl('', { validators: [ Validators.email ] })
+      phoneNumber: new FormControl('', { validators: [ PhoneNumberValidationFactory.SouthAfricanPhoneNumber, Validators.required ] }),
+      email: new FormControl('', { validators: [ EmailValidationFactory.email, Validators.required ] })
     });
 
-    this.genders = Object.values(Gender) as Gender[];
     this.titles = Object.values(Title) as Title[];
+    this.genders = Object.values(Gender) as Gender[];
+    this.customer = {} as Customer;
   }
 
   get idNumber(): AbstractControl { return this.form.get('idNumber'); }

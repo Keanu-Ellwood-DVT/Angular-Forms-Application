@@ -12,7 +12,8 @@
 
     <div class="form-group">
       <label for="firstName">First name <b class="text-danger">*</b></label>
-      <input type="text" class="form-control" formControlName="firstName" id="firstName" autocapitalize="off" autocomplete="false">
+      <input type="text" class="form-control" formControlName="firstName" id="firstName" autocapitalize="off" autocomplete="false"
+      [ngClass]="{'input-invalid': firstName.touched && firstName.invalid && firstName.errors.required}">
 
       <div *ngIf="firstName.touched && firstName.invalid && firstName.errors.required">
         <span class="text-danger">First name is required.</span>
@@ -20,13 +21,14 @@
     </div>
 
     <div class="form-group">
-      <label for="middleName">Middle names</label>
+      <label for="middleName">Middle name(s)</label>
       <input type="text" class="form-control" formControlName="middleName" id="middleName" autocapitalize="off" autocomplete="false">
     </div>
 
     <div class="form-group">
       <label for="lastName">Surname <b class="text-danger">*</b></label>
-      <input type="text" class="form-control" formControlName="lastName" id="lastName" autocapitalize="off" autocomplete="false">
+      <input type="text" class="form-control" formControlName="lastName" id="lastName" autocapitalize="off" autocomplete="false"
+      [ngClass]="{'input-invalid': lastName.touched && lastName.invalid && lastName.errors.required}">
 
       <div *ngIf="lastName.touched && lastName.invalid && lastName.errors.required">
         <span class="text-danger">Surname is required.</span>
@@ -35,15 +37,17 @@
 
     <div class="form-group">
       <label for="idNumber">ID Number <b class="text-danger">*</b></label>
-      <input type="text" class="form-control" formControlName="idNumber" id="idNumber" autocapitalize="off" autocomplete="false">
+      <input type="text" class="form-control" formControlName="idNumber" id="idNumber" autocapitalize="off" appIdentificationNumber autocomplete="false"
+      [ngClass]="{'input-invalid': idNumber.touched && idNumber.invalid && idNumber.errors.required}">
 
-      <div *ngIf="idNumber.touched && idNumber.invalid && idNumber.errors.required">
-        <span class="text-danger">A valid ID number is required.</span>
+      <div *ngIf="idNumber.touched && idNumber.invalid">
+        <span *ngIf="idNumber.errors.required" class="text-danger">Identification number is required. </span>
+        <span *ngIf="idNumber.errors.zaIDNumber" class="text-danger">Invalid ID number. Must be a South African ID number!<br></span>
       </div>
     </div>
 
     <div class="form-group">
-      <label for="nationality">Nationality <b class="text-danger">*</b></label>
+      <label for="nationality">Nationality</label>
       <input type="text" class="form-control" formControlName="nationality" id="nationality" autocapitalize="off" autocomplete="false">
     </div>
 
@@ -55,21 +59,23 @@
     </div>
 
     <div class="form-group">
-      <label for="phoneNumber">Phone number <b class="text-danger">*</b> <sub>(Phone number should start with +27)</sub></label>
-      <input type="text" class="form-control" formControlName="phoneNumber" appLocalPhoneNumber id="phoneNumber">
+      <label for="phoneNumber">Phone number <b class="text-danger">*</b></label>
+      <input type="text" class="form-control" formControlName="phoneNumber" appPhoneNumber id="phoneNumber"
+      [ngClass]="{'input-invalid': phoneNumber.touched && phoneNumber.invalid && phoneNumber.errors.required}">
 
       <div *ngIf="phoneNumber.touched && phoneNumber.invalid">
-        <span *ngIf="phoneNumber.errors.required" class="text-danger">Phone number is required.</span>
-        <span *ngIf="phoneNumber.errors.localPhoneNumber" class="text-danger">Locale code invalid.</span>
-      </div>
+        <span *ngIf="phoneNumber.errors.required" class="text-danger">Phone number is required. </span>
+        <span *ngIf="phoneNumber.errors.zaPhoneNumber" class="text-danger">Invalid phone number. Must be a South African number!<br></span>
+    </div>
     </div>
 
     <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" class="form-control" formControlName="email" id="email">
-
+      <label for="email">Email <b class="text-danger">*</b></label>
+      <input type="email" class="form-control" formControlName="email" appEmail id="email"
+      [ngClass]="{'input-invalid': email.touched && email.invalid && email.errors.required}">
       <div *ngIf="email.touched && email.invalid">
-        <span *ngIf="email.errors.email" class="text-danger">Email address is invalid.</span>
+        <span *ngIf="phoneNumber.errors.required" class="text-danger">Email is required. </span>
+        <span *ngIf="email.errors.validEmail" class="text-danger">A valid Email Adress is required.</span>
       </div>
     </div>
 
