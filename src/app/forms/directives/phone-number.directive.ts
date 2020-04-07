@@ -13,7 +13,7 @@ import { PhoneNumberValidationFactory } from '../validators/phone-number-validat
   ]
 })
 
-export class PhoneNumberDirective implements Validator{
+export class PhoneNumberDirective implements Validator {
   validatePhoneNumber: ValidatorFn;
 
   constructor() {

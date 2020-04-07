@@ -64,11 +64,11 @@ export class CustomerDetailsComponent implements OnInit {
     this.lastName.valueChanges
       .subscribe(x => this.customer.lastName = x);
 
-    combineLatest(
+    combineLatest([
       this.firstName.valueChanges.pipe(startWith(this.customer.firstName)),
       this.middleName.valueChanges.pipe(startWith(this.customer.middleName)),
       this.lastName.valueChanges.pipe(startWith(this.customer.lastName)),
-    )
+    ])
       .pipe(map(x => ({ firstName: x[0] || '', middleName: x[1] || '', lastName: x[2] || '' })))
       .subscribe(names => {
         this.customer.name = `${names.firstName} ${names.middleName} ${names.lastName}`;
@@ -87,7 +87,7 @@ export class CustomerDetailsComponent implements OnInit {
       .subscribe(x => this.customer.email = x);
   }
 
-  displayCustomerDetails(){
+  displayCustomerDetails() {
     alert(JSON.stringify(this.customer));
   }
 

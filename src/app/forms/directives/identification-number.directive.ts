@@ -14,7 +14,7 @@ import { IdNumberValidationFactory } from '../validators/id-number-validation-fa
   ]
 })
 
-export class IdentificationNumberDirective implements Validator{
+export class IdentificationNumberDirective implements Validator {
   validateIdNumber: ValidatorFn;
 
   constructor() {

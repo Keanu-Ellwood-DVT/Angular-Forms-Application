@@ -13,7 +13,7 @@ import { EmailValidationFactory } from '../validators/email-validation-factory';
   ]
 })
 
-export class EmailDirective implements Validator{
+export class EmailDirective implements Validator {
 
   validateEmail: ValidatorFn;
 
@@ -24,5 +24,4 @@ export class EmailDirective implements Validator{
    validate(cont: AbstractControl): ValidationErrors | null {
      return this.validateEmail(cont);
    }
-   
 }
