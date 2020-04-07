@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 import { PhoneNumberDirective } from './forms/directives/phone-number.directive';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +12,8 @@ import { PhoneNumberDirective } from './forms/directives/phone-number.directive'
     PhoneNumberDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
