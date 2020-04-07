@@ -15,3 +15,7 @@ A form that allows the user to specify their address details.
 ## Angular Reactive Form
 
 A form that allows the user to specify their personal details.
+
+
+![](https://raw.githubusercontent.com/Keanu-Ellwood-DVT/angular-forms-demo/master/wireframes/custdet.PNG "Customer Details")
+![](https://raw.githubusercontent.com/Keanu-Ellwood-DVT/angular-forms-demo/master/wireframes/addressf.PNG "Address Form")
