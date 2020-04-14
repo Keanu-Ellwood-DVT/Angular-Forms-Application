@@ -6,7 +6,6 @@ import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/fo
 import { combineLatest } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { PhoneNumberValidationFactory } from 'src/app/forms/validators/phone-number-validation-factory';
-import { EmailValidationFactory } from 'src/app/forms/validators/email-validation-factory';
 import { IdNumberValidationFactory } from 'src/app/forms/validators/id-number-validation-factory';
 
 @Component({
@@ -30,7 +29,7 @@ export class CustomerDetailsComponent implements OnInit {
       lastName: new FormControl('', { validators: [ Validators.required ]}),
       gender: new FormControl('', { updateOn: 'blur' }),
       phoneNumber: new FormControl('', { validators: [ PhoneNumberValidationFactory.SouthAfricanPhoneNumber, Validators.required ] }),
-      email: new FormControl('', { validators: [ EmailValidationFactory.email, Validators.required ] })
+      email: new FormControl('', { validators: [ Validators.email ] })
     });
 
     this.titles = Object.values(Title) as Title[];

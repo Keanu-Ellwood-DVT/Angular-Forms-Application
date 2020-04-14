@@ -150,7 +150,6 @@
         type="email"
         class="form-control"
         formControlName="email"
-        appEmail
         id="email"
         [ngClass]="{
           'input-invalid':
@@ -162,7 +161,7 @@
         <span *ngIf="phoneNumber.errors.required" class="text-danger"
           >Email is required.
         </span>
-        <span *ngIf="email.errors.validEmail" class="text-danger">
+        <span *ngIf="email.errors.email" class="text-danger">
           A valid Email Address is required.
         </span>
       </div>
