@@ -6,7 +6,6 @@ import { AddressFormComponent } from './address-form/address-form.component';
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 import { PhoneNumberDirective } from './forms/directives/phone-number.directive';
 import { ReactiveFormsModule } from '@angular/forms';
-import { EmailDirective } from './forms/directives/email.directive';
 import { IdentificationNumberDirective } from './forms/directives/identification-number.directive';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RouterModule } from '@angular/router';
@@ -17,7 +16,6 @@ import { environment } from '../environments/environment';
     AppComponent,
     CustomerDetailsComponent,
     PhoneNumberDirective,
-    EmailDirective,
     IdentificationNumberDirective,
     AddressFormComponent
   ],

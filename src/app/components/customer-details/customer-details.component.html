@@ -135,11 +135,11 @@
       />
 
       <div *ngIf="phoneNumber.touched && phoneNumber.invalid">
-        <span *ngIf="phoneNumber.errors.required" class="text-danger"
-          >Phone number is required.
+        <span *ngIf="phoneNumber.errors.required" class="text-danger">
+          Phone number is required.
         </span>
-        <span *ngIf="phoneNumber.errors.zaPhoneNumber" class="text-danger"
-          >Invalid phone number. Must be a South African number!<br
+        <span *ngIf="phoneNumber.errors.zaPhoneNumber" class="text-danger">
+          Invalid phone number. Must be a South African number!<br
         /></span>
       </div>
     </div>
@@ -153,19 +153,17 @@
         id="email"
         [ngClass]="{
           'input-invalid':
-            email.touched && email.invalid && email.errors.required
+            email.touched && email.invalid
         }"
       />
 
       <div *ngIf="email.touched && email.invalid">
-        <span *ngIf="phoneNumber.errors.required" class="text-danger"
-          >Email is required.
-        </span>
         <span *ngIf="email.errors.email" class="text-danger">
           A valid Email Address is required.
         </span>
       </div>
     </div>
+
     <button
       type="submit"
       [disabled]="!customerForm.valid"
