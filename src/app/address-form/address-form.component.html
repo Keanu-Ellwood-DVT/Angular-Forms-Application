@@ -15,7 +15,7 @@
       <input [(ngModel)]='address.addressLine1' type='text' class='form-control' name='addressLine1' id='addressLine1' autocapitalize='off' autocomplete='false' required #addressLine1='ngModel'>
 
       <div *ngIf="addressLine1.touched && addressLine1.invalid">
-        <span *ngIf="addressLine1.errors.required" class="text-error">Address line 1 is required.</span>
+        <span *ngIf="addressLine1.errors.required" class="text-danger">Address line 1 is required.</span>
       </div>
     </div>
 
@@ -45,7 +45,7 @@
       <input [(ngModel)]='address.zipCode' type='text' class='form-control' pattern='^\d{4}$' name='zip' id='zip' autocapitalize='off' autocomplete='false' required #zip='ngModel'>
 
       <div *ngIf="zip.touched && zip.invalid">
-        <span *ngIf="zip.errors.required" class="text-error">Zip code is required.</span>
+        <span *ngIf="zip.errors.required" class="text-danger">Zip code is required.</span>
       </div>
     </div>
 
