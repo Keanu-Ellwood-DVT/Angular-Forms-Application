@@ -1,5 +1,6 @@
 # Angular Forms Demo Application
 
+
 Hosting URL: https://angular-forms-demo.web.app 
 
 ## Project Status Badges
@@ -15,3 +16,7 @@ A form that allows the user to specify their address details.
 ## Angular Reactive Form
 
 A form that allows the user to specify their personal details.
+
+
+![](https://raw.githubusercontent.com/Keanu-Ellwood-DVT/angular-forms-demo/master/screenshots/custdet.PNG "Customer Details")
+![](https://raw.githubusercontent.com/Keanu-Ellwood-DVT/angular-forms-demo/master/screenshots/addressf.PNG "Address Form")
