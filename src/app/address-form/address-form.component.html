@@ -1,0 +1,59 @@
+<div class='address-form container'>
+  <div class="form-heading">
+    <h1 class="mx-3">Address Form</h1>
+    <button
+      [routerLink]="['/customer']"
+      routerLinkActive="router-link-active"
+      class="text-button">
+      Customer Details
+    </button>
+  </div>
+
+  <form #addressForm='ngForm' class="col-sm-5" (ngSubmit)='displayAddress()'>
+    <div class='form-group'>
+      <label for='addressLine1'>Address line 1 <b class='text-danger'>*</b></label>
+      <input [(ngModel)]='address.addressLine1' type='text' class='form-control' name='addressLine1' id='addressLine1' autocapitalize='off' autocomplete='false' required #addressLine1='ngModel'>
+
+      <div *ngIf="addressLine1.touched && addressLine1.invalid">
+        <span *ngIf="addressLine1.errors.required" class="text-danger">Address line 1 is required.</span>
+      </div>
+    </div>
+
+    <div class='form-group'>
+      <label for='addressLine2'>Address line 2</label>
+      <input [(ngModel)]='address.addressLine2' type='text' class='form-control' name='addressLine2' id='addressLine2' autocapitalize='off' autocomplete='false' #addressLine2='ngModel'>
+    </div>
+
+    <div class='form-group'>
+      <label for='city'>City <b class='text-danger'>*</b></label>
+      <input [(ngModel)]='address.city' type='text' class='form-control' name='city' id='city' autocapitalize='off' autocomplete='false' required #city='ngModel'>
+
+      <div *ngIf="city.touched && city.invalid && city.errors.required">
+        <span class="text-danger">City is required.</span>
+      </div>
+    </div>
+
+    <div class='form-group'>
+      <label for='province'>Province <b class='text-danger'>*</b></label>
+      <select [(ngModel)]='address.province' class='form-control' id='province' name='province' required>
+        <option *ngFor='let province of provinces' [value]='province'>{{province}}</option>
+      </select>
+    </div>
+
+    <div class='form-group'>
+      <label for='zip'>Zip code <b class='text-danger'>*</b></label>
+      <input [(ngModel)]='address.zipCode' type='text' class='form-control' pattern='^\d{4}$' name='zip' id='zip' autocapitalize='off' autocomplete='false' required #zip='ngModel'>
+
+      <div *ngIf="zip.touched && zip.invalid">
+        <span *ngIf="zip.errors.required" class="text-danger">Zip code is required.</span>
+      </div>
+    </div>
+
+    <button
+      type='submit'
+      [disabled]='!addressForm.valid'
+      class='btn'>
+      Submit
+    </button>
+  </form>
+</div>
