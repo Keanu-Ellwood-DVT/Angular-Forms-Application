@@ -11,16 +11,16 @@ label {
 }
 
 .ng-invalid:not(form) {
-border: 2px solid #FF0039;
+  border: 2px solid #ff0039;
 }
 
-.text-button{
+.text-button {
   border: 0px;
   background-color: transparent;
   text-decoration: none;
 }
 
-.form-heading{
+.form-heading {
   display: flex;
   align-items: center;
 }

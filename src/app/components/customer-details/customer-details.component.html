@@ -12,14 +12,12 @@
   <form
     class="col-sm-5"
     [formGroup]="form"
-    #customerForm='ngForm'
+    #customerForm="ngForm"
     (ngSubmit)="displayCustomerDetails()">
     <div class="form-group">
       <label for="title">Title</label>
       <select class="form-control" id="title" formControlName="title">
-        <option *ngFor="let title of titles" [value]="title">{{
-          title
-        }}</option>
+        <option *ngFor="let title of titles" [value]="title">{{title}}</option>
       </select>
     </div>
 
@@ -35,7 +33,8 @@
         [ngClass]="{
           'input-invalid':
             firstName.touched && firstName.invalid && firstName.errors.required
-        }"/>
+        }"
+      />
 
       <div *ngIf="firstName.touched && firstName.invalid && firstName.errors.required">
         <span class="text-danger">First name is required.</span>
@@ -50,7 +49,8 @@
         formControlName="middleName"
         id="middleName"
         autocapitalize="off"
-        autocomplete="false"/>
+        autocomplete="false"
+      />
     </div>
 
     <div class="form-group">
@@ -65,7 +65,8 @@
         [ngClass]="{
           'input-invalid':
             lastName.touched && lastName.invalid && lastName.errors.required
-        }" />
+        }"
+      />
 
       <div *ngIf="lastName.touched && lastName.invalid && lastName.errors.required">
         <span class="text-danger">Surname is required.</span>
@@ -85,14 +86,15 @@
         [ngClass]="{
           'input-invalid':
             idNumber.touched && idNumber.invalid && idNumber.errors.required
-        }" />
+        }"
+      />
 
       <div *ngIf="idNumber.touched && idNumber.invalid">
         <span *ngIf="idNumber.errors.required" class="text-danger">
           Identification number is required.
         </span>
         <span *ngIf="idNumber.errors.zaIDNumber" class="text-danger">
-        Invalid ID number. Must be a South African ID number!<br/>
+          Invalid ID number. Must be a South African ID number!<br />
         </span>
       </div>
     </div>
@@ -112,9 +114,7 @@
     <div class="form-group">
       <label for="gender">Gender</label>
       <select class="form-control" formControlName="gender" id="gender">
-        <option *ngFor="let gender of genders" [value]="gender">{{
-          gender
-        }}</option>
+        <option *ngFor="let gender of genders" [value]="gender">{{gender}}</option>
       </select>
     </div>
 
@@ -157,20 +157,21 @@
             email.touched && email.invalid && email.errors.required
         }"
       />
+
       <div *ngIf="email.touched && email.invalid">
         <span *ngIf="phoneNumber.errors.required" class="text-danger"
           >Email is required.
         </span>
-        <span *ngIf="email.errors.validEmail" class="text-danger"
-          >A valid Email Address is required.</span
-        >
+        <span *ngIf="email.errors.validEmail" class="text-danger">
+          A valid Email Address is required.
+        </span>
       </div>
     </div>
     <button
-    type='submit'
-    [disabled]='!customerForm.valid'
-    class='btn btn-primary my-2'>
-    Submit
-  </button>
+      type="submit"
+      [disabled]="!customerForm.valid"
+      class="btn btn-primary my-2">
+      Submit
+    </button>
   </form>
 </div>
